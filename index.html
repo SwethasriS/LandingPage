@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Yummy scoops!</title>
+    <link rel="icon" href="./images/favicon.png" type="image/gif" sizes="20x20">
+    <link href="style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+    <body>
+        <header>
+            <nav>
+                <div class="logo">HBS Ice Cream</div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <video autoplay muted loop id="bg-video">
+                <source src="assets/bg2_video.mp4" type="video/mp4">
+            </video>
+            <div class="hero-content">
+                <h1 class="hbs-title">HBS ICE WORLD</h1>
+                <p>The Sweetest Treats in Town!</p>
+                <a href="#menu" class="btn">View Menu</a>
+            </div>
+        </section>
+
+        <div class="about-us-container" id="aboutUsSection">
+            <div class="column">
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <img src="assets/icec1.webp">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="assets/icec2.webp">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="assets/ice3.jpg">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="assets/ice4.jpeg">
+                    </div>
+                </div>
+            </div>
+            <div class="column description-container">
+                <div class="description">
+                    <p class="about-us-title">About us</p>
+                    <p class="about-us-content">Indulge in creamy delights, crafted to perfection. Every scoop is a swirl of happiness and flavor. Taste the joy, one bite at a time!🍦✨</p>
+                    <a class="button" href="#flavourSection">
+                        <p>Check out the flavours</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="flavour-section">
+            <p class="flavour-header">Flavours</p>
+            <div class="flavour-container" id="flavourSection">
+                <div class="flavours">
+                    <img src="assets/choco1.jpg" alt="Avatar" class="image">
+                    <div class="middle">
+                        <div class="text">Delicious chocolate!</div>
+                    </div>
+                </div>
+                <div class="flavours">
+                    <img src="assets/straw.jpg" alt="Avatar" class="image">
+                    <div class="middle">
+                        <div class="text">Sweet strawberry!</div>
+                    </div>
+                </div>
+                <div class="flavours">
+                    <img src="assets/van.jpg" alt="Avatar" class="image">
+                    <div class="middle">
+                        <div class="text">Simply vanilla!</div>
+                    </div>
+                </div>
+                <div class="flavours">
+                    <img src="assets/oreo1.jpg" alt="Avatar" class="image">
+                    <div class="middle">
+                        <div class="text">Funky oreo!</div>
+                    </div>
+                </div>
+                <div class="flavours">
+                    <img src="assets/mango.jpg" alt="Avatar" class="image">
+                    <div class="middle">
+                        <div class="text">Yummy Mango!</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-container" id="contactSection">
+            <div class="contact-section">
+                <p class="subtext">Call for orders</p>
+                <div class="card phone-section">
+                    <div class="contactNumber">
+                        <i class="fa fa-phone phone-icon"></i>
+                        <p>91+9876543210</p>
+                    </div>
+                </div>
+                <p class="subtext visti-text">or visit us...</p>
+                <div class="card">
+                    <div class="address">
+                        <i class="fa fa-map-signs"></i>
+                        <p>86-90 Paul Street, London, England, United Kingdom, EC2A 4NE</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="up-arrow-section">
+                <a href="#navbarSection">
+                    <i class="fa fa-angle-double-up up-arrow"></i>
+                </a>
+            </div>
+        </footer>
+        <script>
+            let slideIndex = 0;
+
+            function showSlides() {
+                let slides = document.getElementsByClassName("mySlides");
+                for (let i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {
+                    slideIndex = 1
+                }
+                slides[slideIndex - 1].style.display = "block";
+                setTimeout(showSlides, 3000); // Change image every 3 seconds
+            }
+
+            showSlides();
+        </script>
+    </body>
+
+
+</html>
